@@ -4,8 +4,8 @@ Library         Selenium2Library
 *** Variables ***
 ${BROWSER}    	  gc
 ${DELEY}    	  0
-${txtUSER}		  vdriconext
-${txtPASSWORD}    vdriconext
+${txtUSER}	  XYZ
+${txtPASSWORD}    XYZ
 ${LOGIN URL}      https://www.iconext.cc/TaaTrainingAdmin/Account/Login/?ReturnUrl=%2FTaaTrainingAdmin
 ${Course Name}    AutoTest003
 ${Course Category}    (//ins[@class="iCheck-helper"])[2]
