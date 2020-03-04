@@ -4,8 +4,8 @@ Library         Selenium2Library
 *** Variables ***
 ${BROWSER}    	  gc
 ${DELEY}    	  1
-${txtUSER}		  Thongchaij
-${txtPASSWORD}    testtest
+${txtUSER}	  XYZ
+${txtPASSWORD}    XYZ
 ${LOGIN URL}      https://www.iconext.cc/TaaTraining/EmployeeProfile
 ${Course}         Test002--Fang 
 
