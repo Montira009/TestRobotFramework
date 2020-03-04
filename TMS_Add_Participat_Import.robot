@@ -4,8 +4,8 @@ Library         Selenium2Library
 *** Variables ***
 ${BROWSER}    	  gc
 ${DELEY}    	  0
-${txtUSER}		  vdriconext
-${txtPASSWORD}    airasia@123
+${txtUSER}	  XYZ
+${txtPASSWORD}    airasia
 ${LOGIN URL}      https://red-u.thaiairasia.co.th/training-admin/Account/Login
 
 
