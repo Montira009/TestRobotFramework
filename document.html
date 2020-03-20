@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"> </script>
+</head>
+<style>
+    body {
+        background: #F8A8F7;
+        font-family: arial;
+        color: #000000;
+    }
+    
+    .menu {
+        width: 300px;
+        margin: auto;
+    }
+
+    .tree {
+        list-style: none;
+        padding-left: 20px;
+        position: relative;
+        color: #000000;
+        font-display: none;
+
+    }
+
+    .tree:before {
+        content: '';
+        width: 3px;
+        background: #E8150B;
+        top: 0;
+        bottom: 7px;
+        left: 0;
+        position: absolute;
+    }
+
+    .tree li {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .tree li:hover, .tree li:focus {
+        color: #C209F9;
+        cursor: pointer;
+    }
+
+    .tree li:before {
+        content: '';
+        width: 20px;
+        height: 3px;
+        background: #E8150B;
+        top: 12px;
+        left: -20px;
+        position: absolute;
+    }
+
+    .tree .tree {
+        display: none;
+    }
+</style>
+
+<body>
+
+ <div class="menu">
+     <h2> Test </h2>
+     <ul class="tree">
+		<li><span class="branch"><i class="fa fa-folder"></i> Project-1</span>
+			<ul class="tree">
+				<li>
+					<span class="branch"><i class="fa fa-folder"></i> Sub-Project 1 </span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-4</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-5</span></li>
+					</ul>
+                </li>
+                <li>
+					<span class="branch"><i class="fa fa-folder"></i> Sub-Project 2</span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-4</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-5</span></li>
+					</ul>
+                </li>
+                
+				<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+				<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+			</ul>
+        </li>
+        
+
+		<li>
+			<span class="branch"><i class="fa fa-folder"></i> Project-2</span>
+			<ul class="tree">
+				<li><span class="branch"><i class="fa fa-folder"></i> Sub Project 1</span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+					</ul>
+				</li>
+				<li><span class="branch"><i class="fa fa-folder"></i> Sub Project 2</span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+					</ul>
+				</li>
+				<li><span class="branch"><i class="fa fa-folder"></i> Sub Project 3</span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+					</ul>
+				</li>
+			</ul>
+        </li>
+        
+
+		<li>
+			<span class="branch"><i class="fa fa-folder"></i> Project-3</span>
+					<ul class="tree">
+						<li><span class="Leaf"><i class="fa fa-file"></i> File-1</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-3</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-4</span></li>
+						<li><span class="Leaf"><i class="fa fa-file "></i> File-5</span></li>
+					</ul>
+        </li>
+        
+
+		<li>
+			<span class="branch"><i class="fa fa-folder"></i> Project-4</span>
+			<ul class="tree">
+				<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+				<li><span class="Leaf"><i class="fa fa-file "></i> File-2</span></li>
+			</ul>
+		</li>
+		<li>
+			<span class="branch"><i class="fa fa-folder"></i> Project-5</span>
+			<ul class="tree">
+				<li><span class="Leaf"><i class="fa fa-file "></i> File-1</span></li>
+			</ul>
+		</li>
+            </ul>
+ </div>
+ <script>
+	$('.branch').click(function(){
+        $(this).children().toggleClass('fa-folder-open');
+		$(this).next().slideToggle();
+	});
+
+ </script>
+</body>
+</html>
